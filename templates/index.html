@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div class="icon">
+        <img align="left" src="https://btrnsfrmd.com/wp-content/uploads/2020/07/Digital-agility-logo.png"width="250"height="150"hspace="5">
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Insurance Charges Prediction</title>
+    <style>
+        /* CSS for centering elements and styling */
+        body {
+            background-image: url('/static/back3.jpg'); /* Replace 'background.jpg' with your image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;  "C:\Users\Admin\Desktop\gkrs phase2\image\back1.jpg"
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+                        margin-right: 200px;
+
+            color: #CC9900;
+            text-shadow: 4px 4px 4px rgba(0.5,0.5,0.5,2);
+        }
+        form {
+            width: 100%;
+            max-width: 400px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin-right: 200px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #FF33FF;
+        }
+        .input-field {
+            margin-bottom: 15px;
+            color : #660033
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            color: #FFFFFF;
+            background-color: #6699FF;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #660033;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Health Insurance Charges Prediction</h1>
+        <form action="/predict" method="post">
+            <div class="input-field">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="input-field">
+                <label for="sex">Sex:</label>
+                <select id="sex" name="sex" required>
+                    <option value="0">Female</option>
+                    <option value="1">Male</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="bmi">BMI:</label>
+                <input type="number" id="bmi" name="bmi" step="0.01" required>
+            </div>
+            <div class="input-field">
+                <label for="children">Number of Children:</label>
+                <input type="number" id="children" name="children" required>
+            </div>
+            <div class="input-field">
+                <label for="smoker">Smoker:</label>
+                <select id="smoker" name="smoker" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="region">Region:</label>
+                <select id="region" name="region" required>
+                    <option value="1">Southwest</option>
+                    <option value="2">Southeast</option>
+                    <option value="3">Northwest</option>
+                    <option value="4">Northeast</option>
+                </select>
+            </div>
+            <button type="submit" class="button">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
